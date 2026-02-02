@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rey Kenneth Suba-an — Portfolio</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <meta name="description" content="Portfolio of Rey Kenneth Suba-an — Mobile Developer, UI Designer, Capstone Developer" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-grid">
+      <div>
+        <h1 class="brand">Rey Kenneth Suba‑an</h1>
+        <p class="subtitle">Mobile App Developer • UI Designer • Capstone Developer</p>
+      </div>
+      <div class="header-actions">
+        <button id="themeToggle" aria-label="Toggle theme">🌙</button>
+        <a class="btn" href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about" class="card">
+      <h2>About</h2>
+      <p>Information Technology student experienced in React Native (Expo), Firebase and UI design. Interested in building secure, user-friendly apps for student safety, feedback systems, and administrative workflows.</p>
+      <ul class="tech-list">
+        <li>React Native (Expo)</li>
+        <li>Firebase (Auth, Firestore, Storage)</li>
+        <li>Figma • Adobe Photoshop</li>
+      </ul>
+    </section>
+
+    <section id="projects" class="card">
+      <div class="section-header">
+        <h2>Projects</h2>
+        <div class="project-controls">
+          <input id="searchInput" type="search" placeholder="Search projects..." aria-label="Search projects" />
+          <select id="filterSelect" aria-label="Filter by tag">
+            <option value="">All</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="projectsGrid" class="projects-grid" aria-live="polite">
+        <!-- Projects loaded from data/projects.json by script.js -->
+      </div>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <p>
+        GitHub: <a href="https://github.com/ReyKennethSuba-an" target="_blank" rel="noopener">ReyKennethSuba-an</a><br/>
+        Email: <a href="mailto:your-email@example.com">your-email@example.com</a>
+      </p>
+      <p>Preferably include an email or a contact link here. You can also use a simple form and Netlify/Forms or formspree for submissions.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> Rey Kenneth Suba‑an — Built with HTML, CSS & vanilla JS</small>
+    </div>
+  </footer>
+
+  <!-- Project detail modal -->
+  <dialog id="projectModal" class="project-modal" aria-hidden="true">
+    <button class="modal-close" id="modalClose" aria-label="Close">✖</button>
+    <div id="modalContent"></div>
+  </dialog>
+
+  <script src="assets/script.js" defer></script>
+</body>
+</html>
