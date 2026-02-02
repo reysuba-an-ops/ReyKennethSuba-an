@@ -1,267 +1,49 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Rey Kenneth R. Suba-an — Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <title>Rey Kenneth R. Suba-an | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <h1>Rey Kenneth R. Suba-an</h1>
-        <p class="tagline">IT Student • Web & App Projects</p>
-      </div>
 
-      <nav class="nav" id="nav">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#certificates">Certificates</a>
-        <a href="#contact">Contact</a>
-      </nav>
+<header>
+  <h1>Rey Kenneth R. Suba-an</h1>
+  <p>IT Student | Software & Game Developer</p>
+</header>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-        ☰
-      </button>
-    </div>
-  </header>
-
-  <main>
-    <section id="about" class="section about container">
-      <div class="about-grid">
-        <div>
-          <h2>About me</h2>
-          <p>Hi — I'm Rey Kenneth, an IT student passionate about building useful and simple digital products. I enjoy web development, mobile apps, and learning new technologies.</p>
-          <p>Contact: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
-        </div>
-        <div class="quick-stats">
-          <div><strong>Projects</strong><span>5+</span></div>
-          <div><strong>Skills</strong><span>Web · Mobile · Databases</span></div>
-          <div><strong>Learning</strong><span>Cloud & AI</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="section projects container">
-      <div class="section-head">
-        <h2>Projects</h2>
-        <div class="filters" id="filters">
-          <button data-filter="all" class="active">All</button>
-          <button data-filter="web">Web</button>
-          <button data-filter="mobile">Mobile</button>
-          <button data-filter="other">Other</button>
-        </div>
-      </div>
-
-      <div class="cards" id="projectsGrid">
-        <!-- Project cards (same as before) -->
-        <article class="card" data-type="web">
-          <img src="https://via.placeholder.com/400x200?text=Project+1" alt="Project 1" />
-          <div class="card-body">
-            <h3>Portfolio Website</h3>
-            <p>Personal portfolio built with HTML/CSS/JS. Clean responsive design and project showcase.</p>
-            <div class="card-actions">
-              <a class="btn" href="#" target="_blank">Live</a>
-              <button class="btn outline details-btn">Details</button>
-            </div>
-          </div>
-        </article>
-
-        <article class="card" data-type="mobile">
-          <img src="https://via.placeholder.com/400x200?text=Project+2" alt="Project 2" />
-          <div class="card-body">
-            <h3>Task Tracker (Mobile)</h3>
-            <p>Simple mobile app prototype for tracking daily tasks. Flutter / Firebase (prototype).</p>
-            <div class="card-actions">
-              <a class="btn" href="#" target="_blank">Demo</a>
-              <button class="btn outline details-btn">Details</button>
-            </div>
-          </div>
-        </article>
-
-        <article class="card" data-type="web">
-          <img src="https://via.placeholder.com/400x200?text=Project+3" alt="Project 3" />
-          <div class="card-body">
-            <h3>Library Management (School)</h3>
-            <p>A CRUD web app for cataloging books, built with PHP and MySQL.</p>
-            <div class="card-actions">
-              <a class="btn" href="#" target="_blank">Repo</a>
-              <button class="btn outline details-btn">Details</button>
-            </div>
-          </div>
-        </article>
-
-        <article class="card" data-type="other">
-          <img src="https://via.placeholder.com/400x200?text=Project+4" alt="Project 4" />
-          <div class="card-body">
-            <h3>Data Visualizations</h3>
-            <p>Interactive charts and dashboards using Chart.js for small datasets and class projects.</p>
-            <div class="card-actions">
-              <a class="btn" href="#" target="_blank">View</a>
-              <button class="btn outline details-btn">Details</button>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="skills" class="section skills container">
-      <h2>Skills</h2>
-      <p>Technical skills with familiarity level. Replace percentages as needed.</p>
-
-      <div class="skill-list">
-        <div class="skill">
-          <div class="skill-label">
-            <span>HTML / CSS / JS</span>
-            <span class="percent">90%</span>
-          </div>
-          <div class="skill-bar" data-level="90"><div class="fill"></div></div>
-        </div>
-
-        <div class="skill">
-          <div class="skill-label">
-            <span>React / Vue</span>
-            <span class="percent">70%</span>
-          </div>
-          <div class="skill-bar" data-level="70"><div class="fill"></div></div>
-        </div>
-
-        <div class="skill">
-          <div class="skill-label">
-            <span>Flutter / Mobile</span>
-            <span class="percent">65%</span>
-          </div>
-          <div class="skill-bar" data-level="65"><div class="fill"></div></div>
-        </div>
-
-        <div class="skill">
-          <div class="skill-label">
-            <span>Databases & SQL</span>
-            <span class="percent">75%</span>
-          </div>
-          <div class="skill-bar" data-level="75"><div class="fill"></div></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- New Certificates section -->
-    <section id="certificates" class="section certificates container">
-      <div class="section-head">
-        <h2>Certificates</h2>
-        <div class="cert-controls">
-          <label class="small-muted">Filter:</label>
-          <div class="filters" id="certFilters">
-            <button data-filter="all" class="active">All</button>
-            <button data-filter="course">Course</button>
-            <button data-filter="professional">Professional</button>
-            <button data-filter="bootcamp">Bootcamp</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="cert-grid" id="certGrid">
-        <!-- Example certificate cards: replace with your actual certificates -->
-        <article class="cert-card" data-type="course" data-pdf="https://example.com/certs/google-it.pdf">
-          <img src="https://via.placeholder.com/600x400?text=Google+IT+Certificate" alt="Google IT Support Certificate" />
-          <div class="card-body">
-            <h3>Google IT Support Professional</h3>
-            <p class="muted-sm">Coursera & Google — Aug 2024</p>
-            <div class="card-actions">
-              <button class="btn" data-action="view-cert">View</button>
-              <a class="btn outline" href="https://example.com/certs/google-it.pdf" target="_blank" rel="noopener">Download</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="cert-card" data-type="course" data-pdf="https://example.com/certs/fcc-frontend.pdf">
-          <img src="https://via.placeholder.com/600x400?text=Front-End+Developer" alt="Front-End Developer Certificate" />
-          <div class="card-body">
-            <h3>Front-End Web Developer</h3>
-            <p class="muted-sm">freeCodeCamp — Nov 2023</p>
-            <div class="card-actions">
-              <button class="btn" data-action="view-cert">View</button>
-              <a class="btn outline" href="https://example.com/certs/fcc-frontend.pdf" target="_blank" rel="noopener">Download</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="cert-card" data-type="professional" data-pdf="https://example.com/certs/aws-cloud.pdf">
-          <img src="https://via.placeholder.com/600x400?text=AWS+Cloud+Practitioner" alt="AWS Cloud Practitioner Certificate" />
-          <div class="card-body">
-            <h3>AWS Cloud Practitioner</h3>
-            <p class="muted-sm">Amazon Web Services — Jan 2025</p>
-            <div class="card-actions">
-              <button class="btn" data-action="view-cert">View</button>
-              <a class="btn outline" href="https://example.com/certs/aws-cloud.pdf" target="_blank" rel="noopener">Download</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Add more certificate cards here -->
-      </div>
-    </section>
-
-    <section id="contact" class="section contact container">
-      <h2>Contact</h2>
-      <p>Want to collaborate or see my work? Reach out via email or connect on LinkedIn.</p>
-
-      <div class="contact-grid">
-        <form class="contact-form" action="mailto:your-email@example.com" method="post" enctype="text/plain">
-          <label>
-            Name
-            <input type="text" name="name" placeholder="Your name" required />
-          </label>
-          <label>
-            Message
-            <textarea name="message" rows="4" placeholder="Hi Rey — I'd like to talk..." required></textarea>
-          </label>
-          <button type="submit" class="btn">Send (mailto)</button>
-        </form>
-
-        <div class="contact-meta">
-          <h3>Social</h3>
-          <p>
-            <a href="#" target="_blank">LinkedIn</a><br />
-            <a href="#" target="_blank">GitHub</a>
-          </p>
-
-          <h3>Resume</h3>
-          <p><a href="#" target="_blank">Download (PDF)</a></p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <small>© <span id="year"></span> Rey Kenneth R. Suba-an — IT Student</small>
-    </div>
-  </footer>
-
-  <!-- Project Modal -->
-  <div class="modal" id="modal" aria-hidden="true">
-    <div class="modal-content" role="dialog" aria-modal="true">
-      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
-      <h3 id="modalTitle">Project Title</h3>
-      <img id="modalImg" src="" alt="" />
-      <p id="modalDesc"></p>
-      <p id="modalLinks"></p>
-    </div>
+<section>
+  <h2>About Me</h2>
+  <div class="card">
+    <p>
+      I’m an IT student passionate about building interactive and user-friendly
+      applications. I enjoy working with web, mobile, and game technologies and
+      continuously improving my skills through hands-on projects.
+    </p>
   </div>
+</section>
 
-  <!-- Certificate Modal -->
-  <div class="modal" id="certModal" aria-hidden="true">
-    <div class="modal-content" role="dialog" aria-modal="true">
-      <button class="modal-close" id="certModalClose" aria-label="Close">✕</button>
-      <h3 id="certModalTitle">Certificate</h3>
-      <img id="certModalImg" src="" alt="Certificate image" />
-      <p id="certModalMeta" class="muted-sm"></p>
-      <div id="certModalActions" style="margin-top:0.6rem"></div>
-    </div>
+<section>
+  <h2>Projects</h2>
+  <div class="card">Project Name – Short description</div>
+  <div class="card">Project Name – Short description</div>
+</section>
+
+<section>
+  <h2>Certificates</h2>
+  <div class="card">Certificate Name – Issuer</div>
+</section>
+
+<section>
+  <h2>Skills</h2>
+  <div class="card">
+    Java, Python, JavaScript, C#, Unity, React Native, HTML, CSS, MySQL, Figma
   </div>
+</section>
 
-  <script src="script.js"></script>
+<footer>
+  © 2026 Rey Kenneth R. Suba-an
+</footer>
+
 </body>
 </html>
