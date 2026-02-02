@@ -18,6 +18,7 @@
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
+        <a href="#certificates">Certificates</a>
         <a href="#contact">Contact</a>
       </nav>
 
@@ -55,7 +56,7 @@
       </div>
 
       <div class="cards" id="projectsGrid">
-        <!-- Project card template: change content / links / images -->
+        <!-- Project cards (same as before) -->
         <article class="card" data-type="web">
           <img src="https://via.placeholder.com/400x200?text=Project+1" alt="Project 1" />
           <div class="card-body">
@@ -145,6 +146,63 @@
       </div>
     </section>
 
+    <!-- New Certificates section -->
+    <section id="certificates" class="section certificates container">
+      <div class="section-head">
+        <h2>Certificates</h2>
+        <div class="cert-controls">
+          <label class="small-muted">Filter:</label>
+          <div class="filters" id="certFilters">
+            <button data-filter="all" class="active">All</button>
+            <button data-filter="course">Course</button>
+            <button data-filter="professional">Professional</button>
+            <button data-filter="bootcamp">Bootcamp</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="cert-grid" id="certGrid">
+        <!-- Example certificate cards: replace with your actual certificates -->
+        <article class="cert-card" data-type="course" data-pdf="https://example.com/certs/google-it.pdf">
+          <img src="https://via.placeholder.com/600x400?text=Google+IT+Certificate" alt="Google IT Support Certificate" />
+          <div class="card-body">
+            <h3>Google IT Support Professional</h3>
+            <p class="muted-sm">Coursera & Google — Aug 2024</p>
+            <div class="card-actions">
+              <button class="btn" data-action="view-cert">View</button>
+              <a class="btn outline" href="https://example.com/certs/google-it.pdf" target="_blank" rel="noopener">Download</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="cert-card" data-type="course" data-pdf="https://example.com/certs/fcc-frontend.pdf">
+          <img src="https://via.placeholder.com/600x400?text=Front-End+Developer" alt="Front-End Developer Certificate" />
+          <div class="card-body">
+            <h3>Front-End Web Developer</h3>
+            <p class="muted-sm">freeCodeCamp — Nov 2023</p>
+            <div class="card-actions">
+              <button class="btn" data-action="view-cert">View</button>
+              <a class="btn outline" href="https://example.com/certs/fcc-frontend.pdf" target="_blank" rel="noopener">Download</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="cert-card" data-type="professional" data-pdf="https://example.com/certs/aws-cloud.pdf">
+          <img src="https://via.placeholder.com/600x400?text=AWS+Cloud+Practitioner" alt="AWS Cloud Practitioner Certificate" />
+          <div class="card-body">
+            <h3>AWS Cloud Practitioner</h3>
+            <p class="muted-sm">Amazon Web Services — Jan 2025</p>
+            <div class="card-actions">
+              <button class="btn" data-action="view-cert">View</button>
+              <a class="btn outline" href="https://example.com/certs/aws-cloud.pdf" target="_blank" rel="noopener">Download</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Add more certificate cards here -->
+      </div>
+    </section>
+
     <section id="contact" class="section contact container">
       <h2>Contact</h2>
       <p>Want to collaborate or see my work? Reach out via email or connect on LinkedIn.</p>
@@ -182,7 +240,7 @@
     </div>
   </footer>
 
-  <!-- Modal for project details -->
+  <!-- Project Modal -->
   <div class="modal" id="modal" aria-hidden="true">
     <div class="modal-content" role="dialog" aria-modal="true">
       <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
@@ -190,6 +248,17 @@
       <img id="modalImg" src="" alt="" />
       <p id="modalDesc"></p>
       <p id="modalLinks"></p>
+    </div>
+  </div>
+
+  <!-- Certificate Modal -->
+  <div class="modal" id="certModal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true">
+      <button class="modal-close" id="certModalClose" aria-label="Close">✕</button>
+      <h3 id="certModalTitle">Certificate</h3>
+      <img id="certModalImg" src="" alt="Certificate image" />
+      <p id="certModalMeta" class="muted-sm"></p>
+      <div id="certModalActions" style="margin-top:0.6rem"></div>
     </div>
   </div>
 
