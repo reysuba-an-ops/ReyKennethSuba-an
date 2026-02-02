@@ -20,7 +20,6 @@ This repository contains a static portfolio website and project assets. It's bui
 - `script.js` — Frontend scripts
 - `images/` — Images and assets
 - `certificates/` — Scanned certificates
-
 ## How to view locally
 
 1. Clone the repo:
