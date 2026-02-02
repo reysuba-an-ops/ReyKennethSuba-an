@@ -3,72 +3,69 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Rey Kenneth Suba-an — Portfolio</title>
+  <title>Rey Kenneth Suba‑an — Portfolio</title>
   <link rel="stylesheet" href="assets/styles.css">
   <meta name="description" content="Portfolio of Rey Kenneth Suba-an — Mobile Developer, UI Designer, Capstone Developer" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-grid">
-      <div>
-        <h1 class="brand">Rey Kenneth Suba‑an</h1>
-        <p class="subtitle">Mobile App Developer • UI Designer • Capstone Developer</p>
-      </div>
-      <div class="header-actions">
-        <button id="themeToggle" aria-label="Toggle theme">🌙</button>
-        <a class="btn" href="#contact">Contact</a>
-      </div>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="logo"><span class="logo-initials">RK</span><span class="logo-name">Suba‑an</span></div>
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#about">Education</a>
+        <a href="#projects">Achievements</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
   </header>
 
-  <main class="container">
-    <section id="about" class="card">
-      <h2>About</h2>
-      <p>Information Technology student experienced in React Native (Expo), Firebase and UI design. Interested in building secure, user-friendly apps for student safety, feedback systems, and administrative workflows.</p>
-      <ul class="tech-list">
-        <li>React Native (Expo)</li>
-        <li>Firebase (Auth, Firestore, Storage)</li>
-        <li>Figma • Adobe Photoshop</li>
-      </ul>
-    </section>
+  <main class="hero-section container" id="home">
+    <div class="hero-left">
+      <h1 class="hero-title">
+        Hi, it's me <span class="accent">Rey</span>!
+      </h1>
 
-    <section id="projects" class="card">
-      <div class="section-header">
-        <h2>Projects</h2>
-        <div class="project-controls">
-          <input id="searchInput" type="search" placeholder="Search projects..." aria-label="Search projects" />
-          <select id="filterSelect" aria-label="Filter by tag">
-            <option value="">All</option>
-          </select>
-        </div>
-      </div>
+      <h2 class="hero-subtitle">
+        I am a <span id="typed" class="typed"></span><span class="cursor" aria-hidden="true">|</span>
+      </h2>
 
-      <div id="projectsGrid" class="projects-grid" aria-live="polite">
-        <!-- Projects loaded from data/projects.json by script.js -->
-      </div>
-    </section>
-
-    <section id="contact" class="card">
-      <h2>Contact</h2>
-      <p>
-        GitHub: <a href="https://github.com/ReyKennethSuba-an" target="_blank" rel="noopener">ReyKennethSuba-an</a><br/>
-        Email: <a href="mailto:your-email@example.com">your-email@example.com</a>
+      <p class="hero-desc">
+        Information Technology student building mobile apps, UI designs, and secure feedback systems. Passionate about real-world solutions for student safety and admin workflows.
       </p>
-      <p>Preferably include an email or a contact link here. You can also use a simple form and Netlify/Forms or formspree for submissions.</p>
-    </section>
-  </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <small>© <span id="year"></span> Rey Kenneth Suba‑an — Built with HTML, CSS & vanilla JS</small>
+      <div class="socials" aria-label="Social links">
+        <!-- Simple SVG icons -->
+        <a class="soc" href="https://github.com/ReyKennethSuba-an" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .5C5.73.5.7 5.53.7 11.8c0 5.06 3.29 9.36 7.86 10.87.57.1.78-.25.78-.55 0-.27-.01-1.17-.01-2.12-3.2.7-3.88-1.43-3.88-1.43-.52-1.33-1.27-1.69-1.27-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.2 1.76 1.2 1.02 1.74 2.67 1.24 3.32.95.1-.74.4-1.24.72-1.53-2.56-.29-5.26-1.28-5.26-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.19a11.1 11.1 0 012.9-.39c.99 0 1.99.13 2.92.39 2.2-1.5 3.17-1.19 3.17-1.19.63 1.59.23 2.77.11 3.06.74.81 1.18 1.84 1.18 3.1 0 4.42-2.71 5.39-5.29 5.67.41.35.77 1.03.77 2.09 0 1.5-.01 2.71-.01 3.08 0 .3.2.66.79.54 4.57-1.52 7.85-5.82 7.85-10.87C23.3 5.53 18.27.5 12 .5z"/></svg>
+        </a>
+
+        <a class="soc" href="#" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M23.5 6.2s-.2-1.6-.8-2.3c-.7-.9-1.5-.9-1.9-1-2.6-.2-6.5-.2-6.5-.2h-.1s-3.9 0-6.5.2c-.4 0-1.2.1-1.9 1-.6.7-.8 2.3-.8 2.3S4 8 4 9.8v1.3C4 13 4 14.8 4 14.8s.2 1.6.8 2.3c.7.9 1.6.9 2 .9 1.5.1 6.3.2 6.3.2s3.9 0 6.5-.2c.4 0 1.2-.1 1.9-1 .6-.7.8-2.3.8-2.3s.2-2.6.2-4.4V9.8c0-1.8-.2-3.6-.2-3.6zM9.6 14.4V8.7l5 2.85-5 2.9z"/></svg>
+        </a>
+
+        <a class="soc" href="#" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 6.1A4.9 4.9 0 1016.9 13 4.9 4.9 0 0012 8.1zM18.5 6.2a1.2 1.2 0 11-1.2-1.2 1.2 1.2 0 011.2 1.2z"/></svg>
+        </a>
+
+        <a class="soc" href="#" target="_blank" rel="noopener" aria-label="Twitter">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M23 5.2a9.3 9.3 0 01-2.6.7 4.5 4.5 0 00-7.7 3.3c0 .4 0 .8.1 1.1A12.9 12.9 0 013 4.9a4.6 4.6 0 001.4 6.2 4.4 4.4 0 01-2-.6v.1A4.5 4.5 0 007.9 15a4.5 4.5 0 01-2 .1 4.6 4.6 0 004.3 3.2A9 9 0 012 19.6a12.8 12.8 0 007 2c8.4 0 13-6.9 13-12.9v-.6A8.6 8.6 0 0023 5.2z"/></svg>
+        </a>
+      </div>
+
+      <div class="actions">
+        <a class="btn btn-primary" href="#contact">Hire</a>
+        <a class="btn btn-outline" href="#contact">Contact</a>
+      </div>
     </div>
-  </footer>
 
-  <!-- Project detail modal -->
-  <dialog id="projectModal" class="project-modal" aria-hidden="true">
-    <button class="modal-close" id="modalClose" aria-label="Close">✖</button>
-    <div id="modalContent"></div>
-  </dialog>
+    <div class="hero-right">
+      <div class="img-wrap neon-glow">
+        <img src="assets/me.jpg" alt="Rey Kenneth Suba‑an" />
+      </div>
+    </div>
+  </main>
 
   <script src="assets/script.js" defer></script>
 </body>
