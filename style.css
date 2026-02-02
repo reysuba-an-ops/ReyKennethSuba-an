@@ -94,4 +94,59 @@ footer {
   transform: scale(1.05);
   box-shadow: 0 10px 20px rgba(34, 211, 238, 0.25);
 }
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  background: #020617;
+  z-index: 1000;
+}
+
+.logo {
+  color: #22d3ee;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #22d3ee;
+}
+
+/* About Section Layout */
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.profile-pic {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #22d3ee;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
 
