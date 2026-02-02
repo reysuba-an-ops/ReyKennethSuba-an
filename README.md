@@ -1,4 +1,4 @@
-# ReyKennethSuba-an# 👋 Hi, I'm Rey Kenneth Suba-an
+👋 Hi, I'm Rey Kenneth Suba-an
 
 🎓 Information Technology Student  
 📱 Mobile App Developer | UI Designer | Capstone Developer  
