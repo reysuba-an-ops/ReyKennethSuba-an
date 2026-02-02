@@ -1,63 +1,59 @@
-# 👋 Hi, I'm Rey Kenneth R. Suba-an
+# Rey Kenneth R. Suba-an — Portfolio
 
-🎓 IT Student | 💻 Aspiring Software Developer | 🎮 Game & AR Enthusiast  
+A personal portfolio and collection of projects showcasing web, game, and AR experiments.
 
-I’m an IT student with hands-on experience in basic software development, web technologies, and game/AR development. I enjoy creating simple, functional, and interactive applications while continuously learning new tools and technologies.
+## Overview
 
----
+This repository contains a static portfolio website and project assets. It's built with plain HTML, CSS, and JavaScript and includes sample projects and certificates.
 
-## 🛠️ Technology Skills
+## Tech Stack
 
-**Programming**
-- Java (Basic), Python, JavaScript, C#
-
-**App, Game & AR Development**
-- Expo (React Native – basic mobile apps)
-- Unity (Game development)
-- Basic AR applications
-
-**Web Development**
 - HTML, CSS, JavaScript
+- Unity (game development)
+- Basic Python, Java, C# knowledge
+- Tools: VS Code, Git & GitHub
 
-**Databases**
-- MySQL (Basic)
-- MS Access
+## Repository Structure
 
-**UI / UX Design**
-- Figma
-- Adobe Photoshop
+- `index.html` — Homepage for the portfolio
+- `style.css` — Styles for the site
+- `script.js` — Frontend scripts
+- `images/` — Images and assets
+- `certificates/` — Scanned certificates
+- `Suba-an_Portfolio/` — Additional portfolio content
 
-**Tools**
-- VS Code
-- Git & GitHub
-- Unity Editor
+## How to view locally
 
-**Office Tools**
-- Microsoft Word, PowerPoint, Excel (Basic)
+1. Clone the repo:
 
-**Technical Support**
-- Basic computer troubleshooting
-- Hardware setup
+```bash
+git clone <your-repo-url>
+cd ReyKennethSuba-an-main
+```
+
+2. Open the site by double-clicking `index.html` or run a local server (recommended):
+
+```bash
+# Using Python 3
+python -m http.server 8000
+# then open http://localhost:8000
+```
+
+## Featured Projects
+
+Add short descriptions and links to project folders or demos here. Example:
+
+- Project A — small web app demonstrating X
+- Project B — Unity prototype showcasing Y
+
+## Certificates
+
+Place scanned certificates in the `certificates/` folder and list them here with issuer and date.
+
+## License & Contact
+
+This repository is available under the MIT License. For questions or collaborations, open an issue or contact me via my GitHub profile.
 
 ---
 
-## 📂 Featured Projects
-> *(I’ll update this as I build more projects)*
-
-- 🔹 **Project Name** – Short description  
-- 🔹 **Project Name** – Short description  
-
----
-
-## 📜 Certificates
-- Certificate Name – Issuer
-- Certificate Name – Issuer
-
----
-
-## 🌐 Portfolio Website
-🔗 **Coming soon / GitHub Pages link here**
-
----
-
-⭐ Feel free to explore my repositories and projects!
+Feel free to tell me any changes you want (tone, sections, or contact details) and I will update this README.
