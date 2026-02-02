@@ -94,15 +94,18 @@ footer {
   transform: scale(1.05);
   box-shadow: 0 10px 20px rgba(34, 211, 238, 0.25);
 }
-/* Navigation Bar */
+/* Sticky Navigation Bar */
 .navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 60px;
+  background: #020617;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
-  position: sticky;
-  top: 0;
-  background: #020617;
+  padding: 0 40px;
   z-index: 1000;
 }
 
@@ -122,31 +125,35 @@ footer {
   color: #e5e7eb;
   text-decoration: none;
   font-size: 0.95rem;
-  transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
   color: #22d3ee;
 }
 
-/* About Section Layout */
-.about-container {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  flex-wrap: wrap;
+/* Header / Hero Section */
+.hero {
+  padding-top: 120px; /* space for fixed navbar */
+  padding-bottom: 60px;
+  text-align: center;
 }
 
-.profile-pic {
-  width: 180px;
-  height: 180px;
+.hero-pic {
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #22d3ee;
+  border: 4px solid #22d3ee;
+  margin-bottom: 20px;
 }
 
-/* Smooth scrolling */
+/* Smooth scroll + offset fix */
 html {
   scroll-behavior: smooth;
 }
+
+section {
+  scroll-margin-top: 80px; /* prevents navbar overlap */
+}
+
 
