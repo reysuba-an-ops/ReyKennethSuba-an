@@ -1,35 +1,63 @@
-# Rey Kenneth R. Suba-an — Portfolio (Template)
+# 👋 Hi, I'm Rey Kenneth R. Suba-an
 
-This is a simple, responsive, interactive portfolio template. It now includes a Certificates section so you can showcase your course and professional certificates.
+🎓 IT Student | 💻 Aspiring Software Developer | 🎮 Game & AR Enthusiast  
 
-## Files
-- `index.html` — main page (about, projects, skills, certificates, contact)
-- `styles.css` — styling (theme + certificates)
-- `script.js` — interactivity (filters, modal, skill animations)
-- `README.md` — this file
+I’m an IT student with hands-on experience in basic software development, web technologies, and game/AR development. I enjoy creating simple, functional, and interactive applications while continuously learning new tools and technologies.
 
-## Certificates feature
-- Add certificate cards in the `#certGrid` area in `index.html`.
-- Each certificate card uses:
-  - `img` — a screenshot or image of the certificate (recommended size: 1200×800 or similar)
-  - `data-pdf` attribute on the `article.cert-card` with the public PDF URL for direct download/open
-  - Title and issuer/date in the card body
-- Visitors can:
-  - Click "View" to open a modal/lightbox to inspect certificate image and open/download the PDF
-  - Click "Download" to open the certificate PDF directly in a new tab or download it
+---
 
-## How to customize certificates
-1. Open `index.html` and find the Certificates section (id=`certificates`).
-2. For each certificate, add or update a `article.cert-card` like:
-   ```html
-   <article class="cert-card" data-type="course" data-pdf="https://your-site.com/certs/your-cert.pdf">
-     <img src="https://your-site.com/images/your-cert-image.jpg" alt="Certificate title" />
-     <div class="card-body">
-       <h3>Certificate Title</h3>
-       <p class="muted-sm">Issuer — Month Year</p>
-       <div class="card-actions">
-         <button class="btn" data-action="view-cert">View</button>
-         <a class="btn outline" href="https://your-site.com/certs/your-cert.pdf" target="_blank" rel="noopener">Download</a>
-       </div>
-     </div>
-   </article>
+## 🛠️ Technology Skills
+
+**Programming**
+- Java (Basic), Python, JavaScript, C#
+
+**App, Game & AR Development**
+- Expo (React Native – basic mobile apps)
+- Unity (Game development)
+- Basic AR applications
+
+**Web Development**
+- HTML, CSS, JavaScript
+
+**Databases**
+- MySQL (Basic)
+- MS Access
+
+**UI / UX Design**
+- Figma
+- Adobe Photoshop
+
+**Tools**
+- VS Code
+- Git & GitHub
+- Unity Editor
+
+**Office Tools**
+- Microsoft Word, PowerPoint, Excel (Basic)
+
+**Technical Support**
+- Basic computer troubleshooting
+- Hardware setup
+
+---
+
+## 📂 Featured Projects
+> *(I’ll update this as I build more projects)*
+
+- 🔹 **Project Name** – Short description  
+- 🔹 **Project Name** – Short description  
+
+---
+
+## 📜 Certificates
+- Certificate Name – Issuer
+- Certificate Name – Issuer
+
+---
+
+## 🌐 Portfolio Website
+🔗 **Coming soon / GitHub Pages link here**
+
+---
+
+⭐ Feel free to explore my repositories and projects!
