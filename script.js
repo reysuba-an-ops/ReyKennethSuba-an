@@ -1,4 +1,4 @@
-// Interactivity: filters, modal, skill animation, mobile nav, smooth scroll
+// Interactivity: filters, modal, skill animation, mobile nav, smooth scroll, certificates modal
 document.addEventListener('DOMContentLoaded', () => {
   // year
   document.getElementById('year').textContent = new Date().getFullYear();
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     nav.style.gap = '0.5rem';
   });
 
-  // filtering
+  // PROJECT filtering
   const filters = document.getElementById('filters');
   const projectsGrid = document.getElementById('projectsGrid');
   filters.addEventListener('click', (e) => {
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // modal details
+  // PROJECT modal details
   const modal = document.getElementById('modal');
   const modalTitle = document.getElementById('modalTitle');
   const modalImg = document.getElementById('modalImg');
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   function closeModal(){ modal.setAttribute('aria-hidden', 'true'); }
 
-  document.querySelectorAll('.details-btn').forEach((btn, idx) => {
+  document.querySelectorAll('.details-btn').forEach((btn) => {
     btn.addEventListener('click', () => {
       const card = btn.closest('.card');
       const title = card.querySelector('h3').textContent;
@@ -60,6 +60,62 @@ document.addEventListener('DOMContentLoaded', () => {
   modalClose.addEventListener('click', closeModal);
   modal.addEventListener('click', (e) => {
     if (e.target === modal) closeModal();
+  });
+
+  // CERTIFICATES: filtering and modal
+  const certFilters = document.getElementById('certFilters');
+  const certGrid = document.getElementById('certGrid');
+  certFilters.addEventListener('click', (e) => {
+    if (e.target.tagName !== 'BUTTON') return;
+    [...certFilters.children].forEach(b => b.classList.remove('active'));
+    e.target.classList.add('active');
+    const type = e.target.dataset.filter;
+    [...certGrid.children].forEach(card => {
+      if (type === 'all' || card.dataset.type === type) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+
+  // Certificate modal
+  const certModal = document.getElementById('certModal');
+  const certModalTitle = document.getElementById('certModalTitle');
+  const certModalImg = document.getElementById('certModalImg');
+  const certModalMeta = document.getElementById('certModalMeta');
+  const certModalActions = document.getElementById('certModalActions');
+  const certModalClose = document.getElementById('certModalClose');
+
+  function openCertModal(title, imgSrc, metaText, pdfUrl){
+    certModalTitle.textContent = title;
+    certModalImg.src = imgSrc || '';
+    certModalImg.alt = title;
+    certModalMeta.textContent = metaText || '';
+    // actions: view in new tab and download
+    certModalActions.innerHTML = `
+      <a class="btn" href="${pdfUrl || '#'}" target="_blank" rel="noopener">Open PDF</a>
+      <a class="btn outline" href="${pdfUrl || '#'}" download>Download</a>
+    `;
+    certModal.setAttribute('aria-hidden', 'false');
+  }
+  function closeCertModal(){ certModal.setAttribute('aria-hidden', 'true'); }
+
+  // attach view handlers for certificates
+  certGrid.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-action="view-cert"]');
+    if (!btn) return;
+    const card = btn.closest('.cert-card');
+    const title = card.querySelector('h3').textContent;
+    const img = card.querySelector('img').src;
+    const meta = card.querySelector('.muted-sm') ? card.querySelector('.muted-sm').textContent : '';
+    const pdf = card.dataset.pdf || '';
+    openCertModal(title, img, meta, pdf);
+  });
+
+  certModalClose.addEventListener('click', closeCertModal);
+  certModal.addEventListener('click', (e) => {
+    if (e.target === certModal) closeCertModal();
   });
 
   // animate skill bars when visible
@@ -82,7 +138,15 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const id = a.getAttribute('href').slice(1);
       document.getElementById(id).scrollIntoView({behavior:'smooth', block:'start'});
-      if (window.innerWidth < 640) nav.style.display = ''; // hide mobile nav after click
+      if (window.innerWidth < 640) nav.style.display = '';
     });
+  });
+
+  // keyboard: close modals with Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      if (modal.getAttribute('aria-hidden') === 'false') closeModal();
+      if (certModal.getAttribute('aria-hidden') === 'false') closeCertModal();
+    }
   });
 });
