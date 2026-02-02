@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rey Kenneth R. Suba-an | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+  <nav class="navbar">
+  <div class="logo">Rey Kenneth</div>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#certificates">Certificates</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+
+<body>
+
+<header id="home" class="hero">
+  <img src="images/profile.png" alt="Rey Kenneth Photo" class="hero-pic">
+
+  <h1>Rey Kenneth R. Suba-an</h1>
+  <p class="hero-title">IT Student | Aspiring Software Developer | Game & AR Enthusiast</p>
+
+  <p class="hero-about">
+    I’m an IT student passionate about building interactive and user-friendly
+    applications. I enjoy working with web, mobile, and game technologies and
+    continuously improving my skills through hands-on projects.
+  </p>
+</header>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div id="projectsGrid" class="projects-grid">
+    <div class="card project-card" data-type="project" >
+      <img src="images/project-ar.png" alt="AR Game Screenshot">
+      <h3>AR Game</h3>
+      <p>A basic augmented reality game built with Unity and AR Foundation.</p>
+      <div class="card-actions">
+        <button class="details-btn">View</button>
+      </div>
+    </div>
+
+    <div class="card project-card" data-type="project">
+      <img src="images/project-capstone.png" alt="Capstone Project Screenshot">
+      <h3>Capstone Project</h3>
+      <p>Final year capstone: a collaborative web/mobile app integrating multiple services.</p>
+      <div class="card-actions">
+        <button class="details-btn">View</button>
+      </div>
+    </div>
+
+    <div class="card project-card" data-type="project">
+      <img src="images/project-site.png" alt="Website Screenshot">
+      <h3>Website</h3>
+      <p>Project site built with HTML, CSS, and JavaScript.</p>
+      <div class="card-actions">
+        <button class="details-btn">View</button>
+      </div>
+    </div>
+
+    <div class="card project-card" data-type="project">
+      <img src="images/project-ui.png" alt="UI Design Screenshot">
+      <h3>UI Design</h3>
+      <p>Collection of UI/UX mockups and designs created in Figma and Photoshop.</p>
+      <div class="card-actions">
+        <button class="details-btn">View</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project Modal -->
+  <div id="modal" class="project-modal" aria-hidden="true">
+    <div class="project-modal-content">
+      <button id="modalClose" class="modal-close" aria-label="Close">&times;</button>
+      <div class="project-modal-media">
+        <img id="modalImg" src="" alt="">
+      </div>
+      <div class="project-modal-body">
+        <h3 id="modalTitle"></h3>
+        <p id="modalDesc"></p>
+        <div id="modalLinks" class="modal-links"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="certificates">
+  <h2>Certificates</h2>
+
+  <div id="certFilters" class="cert-filters" aria-hidden="true"></div>
+
+  <div id="certGrid" class="certificates">
+    <div class="cert-card" data-action="view-cert" data-pdf="certificates/cert1.png" data-type="all">
+      <img src="certificates/cert1.png" alt="DICT Certificate">
+      <h3>DICT Certificate</h3>
+      <p class="muted-sm">Digital IT Certification</p>
+    </div>
+
+    <div class="cert-card" data-action="view-cert" data-pdf="certificates/cert2.png" data-type="all">
+      <img src="certificates/cert2.png" alt="Base PH Certificate">
+      <h3>Base PH Certificate</h3>
+      <p class="muted-sm">Basic Professional Training</p>
+    </div>
+
+    <div class="cert-card" data-action="view-cert" data-pdf="certificates/cert3.png" data-type="all">
+      <img src="certificates/cert3.png" alt="Hackathon Competition Certificate">
+      <h3>Hackathon Competition Certificate</h3>
+      <p class="muted-sm">Competition Participation</p>
+    </div>
+  </div>
+
+  <!-- Certificate Modal -->
+  <div id="certModal" class="cert-modal" aria-hidden="true">
+    <div class="cert-modal-content">
+      <button id="certModalClose" class="modal-close" aria-label="Close">&times;</button>
+      <div class="cert-modal-media">
+        <img id="certModalImg" src="" alt="">
+      </div>
+      <div class="cert-modal-body">
+        <h3 id="certModalTitle"></h3>
+        <p id="certModalMeta" class="muted-sm"></p>
+        <div id="certModalActions" class="cert-modal-actions"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="card">
+    <table class="skills-table">
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Programming</td>
+          <td>Basic Java, Python, JavaScript, C#</td>
+        </tr>
+        <tr>
+          <td>App, Game &amp; AR Development</td>
+          <td>Expo (React Native – basic mobile app development), Unity and basic AR application</td>
+        </tr>
+        <tr>
+          <td>Web Basics</td>
+          <td>HTML, JavaScript and CSS</td>
+        </tr>
+        <tr>
+          <td>Databases</td>
+          <td>Basic MySQL and MS Access</td>
+        </tr>
+        <tr>
+          <td>UI Design</td>
+          <td>Basic UI/UX design using Figma and Adobe Photoshop</td>
+        </tr>
+        <tr>
+          <td>Tools</td>
+          <td>VS Code, Git/GitHub and Unity Editor</td>
+        </tr>
+        <tr>
+          <td>Office Tools</td>
+          <td>Microsoft Excel (basic), Word, PowerPoint</td>
+        </tr>
+        <tr>
+          <td>Technical Support</td>
+          <td>Basic computer trouble shooting and hardware setup</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+  <!-- Contact section (bottom) -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="card contact-card">
+      <form id="contactForm" class="contact-grid" action="#" method="post">
+        <div class="contact-left">
+          <input class="form-input" type="text" name="name" placeholder="Full Name">
+          <input class="form-input" type="email" name="email" placeholder="Email">
+          <input class="form-input" type="tel" name="phone" placeholder="Phone Number">
+          <input class="form-input" type="text" name="subject" placeholder="Subject">
+        </div>
+
+        <div class="contact-right">
+          <textarea class="form-textarea" name="message" placeholder="Your Message"></textarea>
+          <div class="contact-actions">
+            <button type="submit" class="btn-send">Send Message</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Rey Kenneth R. Suba-an
+  </footer>
+
+  <script src="script.js"></script>
+  </body>
+</html>
